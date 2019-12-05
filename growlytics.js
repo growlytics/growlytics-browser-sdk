@@ -1,15 +1,15 @@
 var GrowlyticsSdk = {
   initialize: function (options) {
     (function () {
-      var wzrk = document.createElement('script');
-      wzrk.type = 'text/javascript';
-      wzrk.async = true;
-      wzrk.src = 'http://static.growlytics.in/growlytics.min.js';
+      var glytcs = document.createElement('script');
+      glytcs.type = 'text/javascript';
+      glytcs.async = true;
+      glytcs.src = 'http://static.growlytics.in/growlytics.min.js';
       var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(wzrk, s);
+      s.parentNode.insertBefore(glytcs, s);
       setTimeout(function () {
         window.Growlytics.initialize(options);
-      }, 1000)
+      }, 500)
     })();
   },
 
@@ -24,7 +24,7 @@ var GrowlyticsSdk = {
   },
 
   user: {
-    // identify: function (id, payload) { // FIXME: un comment this when u release typescript sdk
+    // identify: function (id, payload) {
     //     window.Growlytics.user.identify(id, payload)
     // },
     push: function () {
